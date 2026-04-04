@@ -127,7 +127,7 @@ function injectFooter() {
                 </div>
             </div>
             <div>
-                <h4 class="footer-heading">Hızlı Linkler</h4>
+                <h2 class="footer-heading">Hızlı Linkler</h2>
                 <ul class="footer-links">
                     <li><a href="/">Ana Sayfa</a></li>
                     <li><a href="/urun-listesi.html">Satılık Eşyalar</a></li>
@@ -138,7 +138,7 @@ function injectFooter() {
                 </ul>
             </div>
             <div>
-                <h4 class="footer-heading">Bölgelerimiz</h4>
+                <h2 class="footer-heading">Bölgelerimiz</h2>
                 <ul class="footer-links">
                     ${REGIONS.map(r => {
                         const slug = r.toLowerCase().replace(/ı/g,'i').replace(/ö/g,'o').replace(/ü/g,'u').replace(/ş/g,'s').replace(/ğ/g,'g').replace(/ç/g,'c');
@@ -147,7 +147,7 @@ function injectFooter() {
                 </ul>
             </div>
             <div>
-                <h4 class="footer-heading">İletişim</h4>
+                <h2 class="footer-heading">İletişim</h2>
                 <div class="footer-contact-item">
                     <span>📍</span>
                     <span>${ADDRESS}</span>

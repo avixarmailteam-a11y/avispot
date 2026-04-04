@@ -11,9 +11,9 @@
     --primary: #1B5E20;
     --primary-light: #4CAF50;
     --primary-dark: #0D3B13;
-    --accent: #D84315;
-    --accent-light: #FF5722;
-    --accent-dark: #BF360C;
+    --accent: #9A2E00;
+    --accent-light: #D84315;
+    --accent-dark: #681F00;
     --bg-light: #F8FAF9;
     --bg-white: #FFFFFF;
     --text-dark: #1A1A1A;
@@ -682,7 +682,7 @@ body {
 }
 
 .btn-whatsapp-sm {
-    background: #25D366;
+    background: #128C7E;
     color: white;
 }
 .btn-whatsapp-sm:hover {
@@ -973,7 +973,7 @@ body {
     z-index: 999;
     width: 60px;
     height: 60px;
-    background: #25D366;
+    background: #128C7E;
     border-radius: 50%;
     display: flex;
     align-items: center;

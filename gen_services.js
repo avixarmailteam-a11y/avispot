@@ -160,6 +160,7 @@ for(const serv of services) {
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <main id="main-content">
     <!-- PAGE HERO -->
     <section class="page-hero">
         <h1>${serv.name}</h1>
@@ -213,7 +214,8 @@ for(const serv of services) {
         </div>
     </section>
 
-    <script src="/js/main.js"></script>
+        </main>
+<script src="/js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', async () => {
             const grid = document.getElementById('products-list-grid');

@@ -210,6 +210,7 @@ for(const reg of regions) {
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <main id="main-content">
     <!-- PAGE HERO -->
     <section class="page-hero">
         <h1>${reg.name} İkinci El Eşya</h1>
@@ -259,7 +260,8 @@ for(const reg of regions) {
         </div>
     </section>
 
-    <script src="/js/main.js"></script>
+        </main>
+<script src="/js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', async () => {
             const grid = document.getElementById('products-list-grid');
