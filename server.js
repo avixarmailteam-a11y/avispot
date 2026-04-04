@@ -292,12 +292,3 @@ const sslOptions = {
 https.createServer(sslOptions, app).listen(HTTPS_PORT, () => {
     console.log(`\n🔒 Aygül Spot HTTPS sunucusu çalışıyor: https://localhost:${HTTPS_PORT}\n`);
 });
-
-// Otomatik HTTPS Yönlendirme (Port 80)
-const redirectApp = express();
-redirectApp.use((req, res) => {
-    res.redirect(`https://${req.headers.host}${req.url}`);
-});
-http.createServer(redirectApp).listen(HTTP_PORT, () => {
-    console.log(`🌍 HTTP'den HTTPS'ye yönlendirme sunucusu çalışıyor (Port ${HTTP_PORT})`);
-});
