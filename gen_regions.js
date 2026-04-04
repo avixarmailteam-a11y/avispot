@@ -207,6 +207,9 @@ for(const reg of regions) {
     <meta name="keywords" content="${reg.keywords}">
     <meta name="robots" content="index, follow">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -261,7 +264,7 @@ for(const reg of regions) {
     </section>
 
         </main>
-<script src="/js/main.js"></script>
+<script src="/js/main.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', async () => {
             const grid = document.getElementById('products-list-grid');
