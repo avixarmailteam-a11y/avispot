@@ -1,0 +1,7 @@
+node_modules/
+data/database.sqlite
+data/*.sqlite
+uploads/
+.env
+.idea/
+.vscode/

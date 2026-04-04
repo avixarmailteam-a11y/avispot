@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satılık İkinci El Eşyalar | Aygül Spot — Kayseri</title>
+    <meta name="description" content="Aygül Spot mağazamızdaki güncel satılık ikinci el eşyalar. En uygun fiyatlı mobilya, beyaz eşya, televizyon, koltuk takımları. Kayseri içi ücretsiz teslimat avantajıyla.">
+    <meta name="keywords" content="kayseri satılık ikinci el eşya, kayseri ikinci el mobilya fiyatları, ikinci el çamaşır makinesi, spot buzdolabı kayseri">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <!-- Schema.org Dataset/ItemList could be added here -->
+</head>
+<body>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <h1>Satılık Eşyalar</h1>
+        <p>Mağazamızdaki on binlerce kaliteli ikinci el ve spot ürünü keşfedin.</p>
+        <div class="breadcrumb">
+            <a href="/">Ana Sayfa</a>
+            <span>/</span>
+            <a href="/urun-listesi.html">Satılık Eşyalar</a>
+        </div>
+    </section>
+
+    <!-- FILTER SECTION -->
+    <section class="section section-dark" style="padding-bottom:20px;">
+        <div class="container fade-in">
+            <div class="filters-bar">
+                <form id="filter-form" style="display:contents;">
+                    <div style="display:flex; flex-direction:column; gap:0.2rem; flex:1; min-width:200px;">
+                        <label for="search" style="font-size:0.8rem; font-weight:600;">Kelime ile Ara</label>
+                        <input type="text" id="search" name="search" placeholder="Örn: Buzdolabı, Koltuk...">
+                    </div>
+                    
+                    <div style="display:flex; flex-direction:column; gap:0.2rem; flex:1; min-width:150px;">
+                        <label for="category" style="font-size:0.8rem; font-weight:600;">Kategori Seç</label>
+                        <select id="category" name="category">
+                            <option value="">Tüm Kategoriler</option>
+                            <option value="mobilya">Mobilya</option>
+                            <option value="buzdolabi">Buzdolabı</option>
+                            <option value="beyaz-esya">Beyaz Eşya</option>
+                            <option value="televizyon">Televizyon</option>
+                            <option value="yatak-odasi">Yatak Odası</option>
+                            <option value="salon-takimi">Salon Takımı</option>
+                            <option value="spot-esya">Spot Eşya</option>
+                        </select>
+                    </div>
+
+                    <div style="display:flex; align-items:flex-end; gap:0.8rem; flex-wrap:wrap;">
+                        <button type="submit" class="btn-filter">Filtrele</button>
+                        <button type="button" id="btn-clear" class="btn-clear">Temizle</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS GRID -->
+    <section class="section pt-0">
+        <div class="container">
+            <div id="loading" class="loading-spinner" style="display:none;"></div>
+            
+            <div class="products-grid stagger" id="products-list-grid">
+                <!-- JS will fetch and inject products here -->
+            </div>
+
+            <!-- Empty State -->
+            <div id="no-products" class="empty-state" style="display:none;">
+                <div class="empty-state-icon">🔍</div>
+                <h3>Kriterlere uygun ürün bulunamadı</h3>
+                <p>Arama veya filtreleme seçeneklerinizi değiştirerek tekrar deneyin.</p>
+                <button type="button" onclick="document.getElementById('btn-clear').click()" class="btn-primary mt-1" style="border:none; cursor:pointer;">Filtreleri Temizle</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/products.js"></script>
+</body>
+</html>

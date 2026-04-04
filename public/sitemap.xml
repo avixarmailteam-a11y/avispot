@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- ANA SAYFALAR -->
+    <url><loc>https://aygulspot.com/</loc><priority>1.0</priority></url>
+    <url><loc>https://aygulspot.com/hizmetlerimiz.html</loc><priority>0.9</priority></url>
+    <url><loc>https://aygulspot.com/urun-listesi.html</loc><priority>0.9</priority></url>
+    <url><loc>https://aygulspot.com/hakkimizda.html</loc><priority>0.8</priority></url>
+    <url><loc>https://aygulspot.com/galeri.html</loc><priority>0.8</priority></url>
+    <url><loc>https://aygulspot.com/iletisim.html</loc><priority>0.8</priority></url>
+
+    <!-- KATEGORİ SEO SAYFALARI -->
+    <url><loc>https://aygulspot.com/ikinci-el-mobilya.html</loc><priority>0.9</priority></url>
+    <url><loc>https://aygulspot.com/ikinci-el-buzdolabi.html</loc><priority>0.9</priority></url>
+    <url><loc>https://aygulspot.com/spot-esya.html</loc><priority>0.9</priority></url>
+    <url><loc>https://aygulspot.com/ikinci-el-beyaz-esya.html</loc><priority>0.9</priority></url>
+    <url><loc>https://aygulspot.com/ikinci-el-televizyon.html</loc><priority>0.9</priority></url>
+    <url><loc>https://aygulspot.com/ikinci-el-yatak-odasi.html</loc><priority>0.9</priority></url>
+    <url><loc>https://aygulspot.com/ikinci-el-salon-takimi.html</loc><priority>0.9</priority></url>
+
+    <!-- BÖLGE SEO SAYFALARI -->
+    <url><loc>https://aygulspot.com/talas-ikinci-el-esya.html</loc><priority>0.8</priority></url>
+    <url><loc>https://aygulspot.com/ildem-ikinci-el-esya.html</loc><priority>0.8</priority></url>
+    <url><loc>https://aygulspot.com/erkilet-ikinci-el-esya.html</loc><priority>0.8</priority></url>
+    <url><loc>https://aygulspot.com/melikgazi-ikinci-el-esya.html</loc><priority>0.8</priority></url>
+    <url><loc>https://aygulspot.com/hacilar-ikinci-el-esya.html</loc><priority>0.8</priority></url>
+    <url><loc>https://aygulspot.com/develi-ikinci-el-esya.html</loc><priority>0.7</priority></url>
+    <url><loc>https://aygulspot.com/belsin-ikinci-el-esya.html</loc><priority>0.8</priority></url>
+    <url><loc>https://aygulspot.com/altinoluk-ikinci-el-esya.html</loc><priority>0.7</priority></url>
+    <url><loc>https://aygulspot.com/mimsin-ikinci-el-esya.html</loc><priority>0.8</priority></url>
+</urlset>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Aygül Spot — Kayseri İkinci El Eşya</title>
+    <meta name="description" content="Kayseri Aygül Spot iletişim bilgileri. Adres: Tacettin Veli Mah. Deliklitaş Cd. No:29/C Melikgazi / Kayseri. Telefon: 0539 319 09 59.">
+    <meta name="keywords" content="aygül spot iletişim, kayseri ikinci el eşya numarası, aygül spot nerede">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <h1>Bize Ulaşın</h1>
+        <p>Satmak istediğiniz eşyalar için veya aradığınız bir ürün için iletişime geçin.</p>
+        <div class="breadcrumb">
+            <a href="/">Ana Sayfa</a>
+            <span>/</span>
+            <a href="/iletisim.html">İletişim</a>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section">
+        <div class="container fade-in">
+            <div class="contact-grid">
+                
+                <!-- Info & Map -->
+                <div>
+                    <h2 style="font-family:'Playfair Display', serif; margin-bottom:1.5rem; font-size:1.8rem;">İletişim Bilgileri</h2>
+                    <div class="contact-info-cards">
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon">📍</div>
+                            <div>
+                                <h4>Mağaza Adresi</h4>
+                                <p>Tacettin Veli Mah. Deliklitaş Cd.<br>No:29/C Melikgazi / Kayseri</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon">📞</div>
+                            <div>
+                                <h4>Telefon</h4>
+                                <a href="tel:+905393190959">0539 319 09 59</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon">💬</div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/905393190959?text=Merhaba,%20sitenizden%20ulaşıyorum." target="_blank">WhatsApp'tan Yazın</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="contact-info-icon">🕒</div>
+                            <div>
+                                <h4>Çalışma Saatleri</h4>
+                                <p>Pazartesi - Cumartesi: 09:00 - 19:00<br>Pazar: Kapalı</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-wrapper mt-2">
+                        <!-- Generic Google Maps embed for Kayseri Melikgazi as placeholder -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12543.12345!2d35.4784!3d38.7312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152b123456789%3A0x123456789!2xTacettin+Veli%2C+Melikgazi%2FKayseri!5e0!3m2!1str!2str!4v1600000000000!5m2!1str!2str" loading="lazy" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div>
+                    <h2 style="font-family:'Playfair Display', serif; margin-bottom:1.5rem; font-size:1.8rem;">Bize Mesaj Gönderin</h2>
+                    <form class="contact-form" id="contact-form" style="background:white; padding:2rem; border-radius:var(--radius-lg); box-shadow:var(--shadow-sm); border:1px solid #f0f0f0;">
+                        
+                        <div class="form-group">
+                            <label for="name">Adınız Soyadınız *</label>
+                            <input type="text" id="name" name="name" required placeholder="Adınız Soyadınız">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Telefon Numaranız</label>
+                                <input type="tel" id="phone" name="phone" placeholder="05XX XXX XX XX">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-posta Adresiniz</label>
+                                <input type="email" id="email" name="email" placeholder="ornek@email.com">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mesajınız *</label>
+                            <textarea id="message" name="message" required placeholder="Size nasıl yardımcı olabiliriz? Sorularınızı veya eşya satışı ile ilgili detayları buraya yazabilirsiniz."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary" style="margin-top:1rem; width:100%; border:none; padding:1rem;">Gönder <span id="submit-loader" style="display:none;">...</span></button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/main.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const btn = e.target.querySelector('button[type="submit"]');
+            const loader = document.getElementById('submit-loader');
+            
+            btn.disabled = true;
+            loader.style.display = 'inline';
+
+            const payload = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+
+            try {
+                const res = await fetch('/api/messages', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                if(!res.ok) throw new Error('Network response was not ok');
+                
+                showToast('Mesajınız başarıyla gönderildi! En kısa sürede döneceğiz.', 'success');
+                e.target.reset();
+            } catch (error) {
+                console.error(error);
+                showToast('Mesaj gönderilirken bir hata oluştu.', 'error');
+            } finally {
+                btn.disabled = false;
+                loader.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
