@@ -11,9 +11,9 @@
     --primary: #1B5E20;
     --primary-light: #4CAF50;
     --primary-dark: #0D3B13;
-    --accent: #FF6F00;
-    --accent-light: #FFA040;
-    --accent-dark: #C43E00;
+    --accent: #D84315;
+    --accent-light: #FF5722;
+    --accent-dark: #BF360C;
     --bg-light: #F8FAF9;
     --bg-white: #FFFFFF;
     --text-dark: #1A1A1A;
@@ -865,7 +865,7 @@ body {
 
 .site-footer {
     background: var(--footer-bg);
-    color: rgba(255,255,255,0.75);
+    color: rgba(255,255,255,0.90);
     padding: 60px 1rem 0;
 }
 
@@ -878,9 +878,10 @@ body {
 }
 
 .footer-brand p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     line-height: 1.7;
     margin-top: 1rem;
+    color: rgba(255,255,255,0.85);
 }
 
 .footer-heading {
@@ -897,7 +898,7 @@ body {
 .footer-links li { margin-bottom: 0.5rem; }
 
 .footer-links a {
-    color: rgba(255,255,255,0.65);
+    color: rgba(255,255,255,0.85);
     text-decoration: none;
     font-size: 0.88rem;
     transition: var(--transition);
@@ -950,8 +951,8 @@ body {
     padding: 1.5rem 0;
     border-top: 1px solid rgba(255,255,255,0.08);
     text-align: center;
-    font-size: 0.82rem;
-    color: rgba(255,255,255,0.45);
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.75);
 }
 
 @media (max-width: 1024px) {
