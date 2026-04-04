@@ -4,6 +4,7 @@ const fs = require('fs');
 const https = require('https');
 const http = require('http');
 const multer = require('multer');
+const compression = require('compression'); // GZIP optimization
 const db = require('./database');
 
 const app = express();
@@ -14,9 +15,13 @@ const HTTP_PORT = process.env.HTTP_PORT || 80;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Static files
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+// Performance Middleware (GZIP)
+app.use(compression());
+
+// Static files (with cache strategy)
+const cacheOptions = { maxAge: '30d' }; // Cache assets for 30 days
+app.use(express.static(path.join(__dirname, 'public'), cacheOptions));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads'), cacheOptions));
 
 // Uploads klasörünü oluştur
 const uploadsDir = path.join(__dirname, 'uploads');
