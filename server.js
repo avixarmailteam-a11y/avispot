@@ -18,8 +18,16 @@ app.use(express.urlencoded({ extended: true }));
 // Performance Middleware (GZIP)
 app.use(compression());
 
-// Static files (with cache strategy)
-const cacheOptions = { maxAge: '30d' }; // Cache assets for 30 days
+// Static files (with smart cache strategy)
+const cacheOptions = {
+    setHeaders: (res, path) => {
+        if (path.endsWith('.html')) {
+            res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate'); // Never cache HTML!
+        } else {
+            res.setHeader('Cache-Control', 'public, max-age=86400'); // 1 Day for CSS/JS
+        }
+    }
+};
 app.use(express.static(path.join(__dirname, 'public'), cacheOptions));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads'), cacheOptions));
 
