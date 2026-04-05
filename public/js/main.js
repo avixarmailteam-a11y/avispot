@@ -175,6 +175,7 @@ function injectFooter() {
         </div>
         <div class="footer-bottom">
             <p>&copy; ${new Date().getFullYear()} Aygül Spot — Kayseri İkinci El Eşya. Tüm hakları saklıdır.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem; color: rgba(255,255,255,0.5);">Aygül Spot & Avixar Software İş Birliği ile Hazırlanmıştır.</p>
         </div>
     `;
     document.body.appendChild(footer);
