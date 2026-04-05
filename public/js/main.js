@@ -96,10 +96,17 @@ function injectHeader() {
         });
     });
 
-    // Sticky header scroll effect
+    // Sticky header scroll effect (optimized to avoid forced reflows)
+    let ticking = false;
     window.addEventListener('scroll', () => {
-        header.classList.toggle('scrolled', window.scrollY > 50);
-    });
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                header.classList.toggle('scrolled', window.scrollY > 50);
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
 }
 
 // Footer oluştur
